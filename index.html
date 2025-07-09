@@ -1,170 +1,128 @@
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="شاهد أفضل ملخصات وأخبار الأنمي مثل قاتل الشياطين، ساكاموتو دايز، جيون، والمزيد على موقعنا.">
-  <meta name="keywords" content="أنمي, قاتل الشياطين, ساكاموتو دايز, جيون, الأقمار العليا, أخبار الأنمي, ملخصات أنمي">
-  <meta name="author" content="AnimeHub">
-  <title>AnimeHub - ملخصات وأخبار الأنمي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <title>انيميدو | Animedo</title>
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #121212;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0f7fa;
     }
     header {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #1f1f1f;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-    header img {
-      height: 50px;
-      margin-left: 15px;
+      background: linear-gradient(90deg, #0a0a0a, #0288d1);
+      padding: 20px;
+      text-align: center;
     }
     header h1 {
-      font-size: 28px;
-      margin: 0;
+      font-size: 2.5em;
+      color: #4dd0e1;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 30px;
+    header p {
+      font-size: 1.2em;
+      color: #b2ebf2;
     }
-    .card {
-      background-color: #1e1e1e;
-      border-radius: 15px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(255,255,255,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #01579b;
     }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 30px rgba(0,255,255,0.3);
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      border-bottom: 4px solid #00ffff;
-      box-shadow: 0 0 15px rgba(0,255,255,0.5);
-    }
-    .card a {
-      display: block;
-      padding: 15px;
+    nav a {
+      padding: 15px 20px;
+      color: white;
       text-decoration: none;
-      color: #00ffff;
-      font-size: 18px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #0288d1;
+    }
+    section {
+      padding: 30px;
+      border-bottom: 1px solid #333;
+    }
+    h2 {
+      color: #4dd0e1;
+    }
+    a {
+      color: #80deea;
+    }
+    .video-link {
+      display: block;
+      margin: 10px 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    img.banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.postimg.cc/ZRY0qmxY/Picsart-25-04-22-01-50-48-311.png" alt="لوجو الموقع">
-    <h1>AnimeHub</h1>
+    <h1>انيميدو | Animedo</h1>
+    <p>قناة انيميدو ل تلخيص الانمي و المانجا - افضل ملخصات انمي هتشوفها يا اسطوره</p>
   </header>
 
-  
-<div class="gallery">
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/c1mMT1bh/Picsart-25-02-20-01-32-01-524.jpg" alt="قاتل الشياطين الموسم الخامس">
-      قاتل الشياطين الموسم الخامس
+  <nav>
+    <a href="#main">الرئيسية</a>
+    <a href="#anime">ملخصات انمي</a>
+    <a href="#manhwa">ملخصات مانهوا</a>
+    <a href="#demonslayer">قاتل الشياطين S5</a>
+    <a href="#playlists">قوائم التشغيل</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section id="main">
+    <h2>الرئيسية</h2>
+    <p>مرحباً بك في موقع قناة انيميدو، المصدر الأفضل لملخصات الأنمي والمانهوا، وقصص قاتل الشياطين وكل جديد.</p>
+    <img class="banner" src="https://i.ibb.co/WkYHZ9D/anime-banner.jpg" alt="Anime banner">
+  </section>
+
+  <section id="anime">
+    <h2>ملخصات انمي</h2>
+    <a class="video-link" href="https://youtu.be/CbWf-bcbGxY" target="_blank">ملخص أنمي: فيديو 1</a>
+    <a class="video-link" href="https://youtu.be/wZ1iteR2F9E" target="_blank">ملخص أنمي: فيديو 2</a>
+  </section>
+
+  <section id="manhwa">
+    <h2>ملخصات مانهوا</h2>
+    <p>سيتم إضافة روابط الفيديوهات هنا لاحقًا.</p>
+  </section>
+
+  <section id="demonslayer">
+    <h2>قاتل الشياطين - الموسم الخامس</h2>
+    <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2Vn82mcZpdMgtOSGujIeHr" target="_blank">
+      قاتل الشياطين الجزء الخامس 5️⃣ ما بعد احداث الانمي 🔥🔥
     </a>
-  </div>
+  </section>
 
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/c4k7y9Z8/Picsart-25-06-09-05-11-29-527.jpg" alt="حكاية جيون">
-      حكاية جيون
-    </a>
-  </div>
+  <section id="playlists">
+    <h2>قوائم التشغيل</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_38sm_EkmBhHPoEo43QXWVH" target="_blank">ماضي الأقمار العليا في قاتل الشياطين</a></li>
+      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_3dv7k3yIZer4F_ppEWru1g" target="_blank">حكايه جيون ملخص مانهوا Return of the Disaster-Class Hero</a></li>
+      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_1ZYfqI3OaBrn2TuH7KLmAY" target="_blank">ساكاموتو دايز ملخص الانمي 🔰🔥</a></li>
+      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2UmWH6kp5FbT9xip0kRTTl" target="_blank">اخبار و مواعيد انمي</a></li>
+    </ul>
+  </section>
 
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/vmf5nGnW/Picsart-25-06-25-07-39-00-839.png" alt="ماضي الأقمار العليا">
-      ماضي الأقمار العليا
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/KzbBrC7C/Picsart-25-01-26-01-13-45-415.jpg" alt="ساكاموتو دايز">
-      ساكاموتو دايز
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/V6FM74Dv/Picsart-25-02-10-20-06-45-388.jpg" alt="أخبار الأنمي">
-      أخبار الأنمي
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/wMfNzMKd/6839a85311eb71e9a98d.png" alt="ملخص أنمي - الفيديو الأول">
-      ملخص أنمي - الفيديو الأول
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="#">
-      <img src="https://i.postimg.cc/02jmfYm5/Picsart-24-12-23-04-50-50-408.jpg" alt="ملخص أنمي - الفيديو الثاني">
-      ملخص أنمي - الفيديو الثاني
-    </a>
-  </div>
-</div>
-
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/c4k7y9Z8/Picsart-25-06-09-05-11-29-527.jpg" alt="حكاية جيون">
-        حكاية جيون
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/vmf5nGnW/Picsart-25-06-25-07-39-00-839.png" alt="ماضي الأقمار العليا">
-        ماضي الأقمار العليا
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/KzbBrC7C/Picsart-25-01-26-01-13-45-415.jpg" alt="ساكاموتو دايز">
-        ساكاموتو دايز
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/V6FM74Dv/Picsart-25-02-10-20-06-45-388.jpg" alt="أخبار الأنمي">
-        أخبار الأنمي
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/wMfNzMKd/6839a85311eb71e9a98d.png" alt="ملخص أنمي - الفيديو الأول">
-        ملخص أنمي - الفيديو الأول
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="#">
-        <img src="https://i.postimg.cc/02jmfYm5/Picsart-24-12-23-04-50-50-408.jpg" alt="ملخص أنمي - الفيديو الثاني">
-        ملخص أنمي - الفيديو الثاني
-      </a>
-    </div>
-  </div>
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>رقم الواتساب: <strong>01128726182</strong></p>
+    <p><a href="https://whatsapp.com/channel/0029Vb4yNSA7DAWp1e0uub04" target="_blank">جروب الواتساب الرسمي</a></p>
+    <p><a href="https://Animedo.wuiltweb.com" target="_blank">رابط قناة Animedo</a></p>
+  </section>
 </body>
 </html>
