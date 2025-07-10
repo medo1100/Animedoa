@@ -2,127 +2,149 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>انيميدو | Animedo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANIMEDO - موقع الأنمي</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #0a0a0a;
-      color: #e0f7fa;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
     }
     header {
-      background: linear-gradient(90deg, #0a0a0a, #0288d1);
-      padding: 20px;
-      text-align: center;
+      background-color: #222;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     header h1 {
-      font-size: 2.5em;
-      color: #4dd0e1;
+      margin: 0;
+      font-size: 22px;
     }
-    header p {
-      font-size: 1.2em;
-      color: #b2ebf2;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #01579b;
-    }
-    nav a {
-      padding: 15px 20px;
+    .sidebar-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
       color: white;
+      cursor: pointer;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #222;
+      overflow-y: auto;
+      transition: right 0.3s ease;
+      padding: 20px;
+      z-index: 999;
+    }
+    .sidebar.open {
+      right: 0;
+    }
+    .sidebar a {
+      display: block;
+      color: #0ff;
       text-decoration: none;
+      margin-bottom: 10px;
       font-weight: bold;
     }
-    nav a:hover {
-      background-color: #0288d1;
+    .content {
+      padding: 20px;
     }
-    section {
-      padding: 30px;
-      border-bottom: 1px solid #333;
+    .video-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    h2 {
-      color: #4dd0e1;
+    .video-card {
+      background: #222;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .video-card:hover {
+      background: #333;
+      transform: scale(1.03);
+    }
+    .video-card img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0ff;
+    }
+    .video-card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #0ff;
     }
     a {
-      color: #80deea;
-    }
-    .video-link {
-      display: block;
-      margin: 10px 0;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
-    img.banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>انيميدو | Animedo</h1>
-    <p>قناة انيميدو ل تلخيص الانمي و المانجا - افضل ملخصات انمي هتشوفها يا اسطوره</p>
+    <h1>ANIMEDO</h1>
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
   </header>
 
-  <nav>
-    <a href="#main">الرئيسية</a>
-    <a href="#anime">ملخصات انمي</a>
-    <a href="#manhwa">ملخصات مانهوا</a>
-    <a href="#demonslayer">قاتل الشياطين S5</a>
-    <a href="#playlists">قوائم التشغيل</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+  <div class="sidebar" id="sidebar">
+    <a href="#">الرئيسية</a>
+    <a href="#">فيديوهات</a>
+    <a href="#">قاتل الشياطين</a>
+    <a href="#">جيون</a>
+    <a href="#">ساكاموتو</a>
+    <a href="#">ملخصات</a>
+    <a href="#">أخبار الأنمي</a>
+    <a href="#">مقالات</a>
+    <a href="#">من نحن</a>
+    <a href="#">تواصل معنا</a>
+  </div>
 
-  <section id="main">
-    <h2>الرئيسية</h2>
-    <p>مرحباً بك في موقع قناة انيميدو، المصدر الأفضل لملخصات الأنمي والمانهوا، وقصص قاتل الشياطين وكل جديد.</p>
-    <img class="banner" src="https://i.ibb.co/WkYHZ9D/anime-banner.jpg" alt="Anime banner">
-  </section>
+  <div class="content">
+    <h2>📺 فيديوهات أنيميدو</h2>
+    <div class="video-section">
 
-  <section id="anime">
-    <h2>ملخصات انمي</h2>
-    <a class="video-link" href="https://youtu.be/CbWf-bcbGxY" target="_blank">ملخص أنمي: فيديو 1</a>
-    <a class="video-link" href="https://youtu.be/wZ1iteR2F9E" target="_blank">ملخص أنمي: فيديو 2</a>
-  </section>
+      <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2Vn82mcZpdMgtOSGujIeHr" target="_blank" class="video-card">
+        <img src="https://i.postimg.cc/c1mMT1bh/Picsart-25-02-20-01-32-01-524.jpg" alt="قاتل الشياطين">
+        <h3>قاتل الشياطين الموسم الخامس</h3>
+      </a>
 
-  <section id="manhwa">
-    <h2>ملخصات مانهوا</h2>
-    <p>سيتم إضافة روابط الفيديوهات هنا لاحقًا.</p>
-  </section>
+      <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_3dv7k3yIZer4F_ppEWru1g" target="_blank" class="video-card">
+        <img src="https://i.postimg.cc/c4k7y9Z8/Picsart-25-06-09-05-11-29-527.jpg" alt="جيون">
+        <h3>حكايه جيون</h3>
+      </a>
 
-  <section id="demonslayer">
-    <h2>قاتل الشياطين - الموسم الخامس</h2>
-    <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2Vn82mcZpdMgtOSGujIeHr" target="_blank">
-      قاتل الشياطين الجزء الخامس 5️⃣ ما بعد احداث الانمي 🔥🔥
-    </a>
-  </section>
+      <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_38sm_EkmBhHPoEo43QXWVH" target="_blank" class="video-card">
+        <img src="https://i.postimg.cc/vmf5nGnW/Picsart-25-06-25-07-39-00-839.png" alt="ماضي الأقمار العليا">
+        <h3>ماضي الأقمار العليا</h3>
+      </a>
 
-  <section id="playlists">
-    <h2>قوائم التشغيل</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_38sm_EkmBhHPoEo43QXWVH" target="_blank">ماضي الأقمار العليا في قاتل الشياطين</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_3dv7k3yIZer4F_ppEWru1g" target="_blank">حكايه جيون ملخص مانهوا Return of the Disaster-Class Hero</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_1ZYfqI3OaBrn2TuH7KLmAY" target="_blank">ساكاموتو دايز ملخص الانمي 🔰🔥</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2UmWH6kp5FbT9xip0kRTTl" target="_blank">اخبار و مواعيد انمي</a></li>
-    </ul>
-  </section>
+      <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_1ZYfqI3OaBrn2TuH7KLmAY" target="_blank" class="video-card">
+        <img src="https://i.postimg.cc/KzbBrC7C/Picsart-25-01-26-01-13-45-415.jpg" alt="ساكاموتو دايز">
+        <h3>ساكاموتو دايز</h3>
+      </a>
 
-  <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p>رقم الواتساب: <strong>01128726182</strong></p>
-    <p><a href="https://whatsapp.com/channel/0029Vb4yNSA7DAWp1e0uub04" target="_blank">جروب الواتساب الرسمي</a></p>
-    <p><a href="https://Animedo.wuiltweb.com" target="_blank">رابط قناة Animedo</a></p>
-  </section>
+      <a href="https://www.youtube.com/playlist?list=PLwQjPJaHFE_2UmWH6kp5FbT9xip0kRTTl" target="_blank" class="video-card">
+        <img src="https://i.postimg.cc/V6FM74Dv/Picsart-25-02-10-20-06-45-388.jpg" alt="أخبار الأنمي">
+        <h3>أخبار الأنمي</h3>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
+
 </body>
 </html>
